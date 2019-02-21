@@ -1,0 +1,25 @@
+@import '~src/assets/sass/variables'
+@import '~src/assets/sass/mixins'
+
+.menu
+	width: $side-menu_width +px
+	position: fixed
+	&-logo
+		width: 80%
+		&__container
+			margin: 20px 0 50px
+	&-item
+		display: flex
+		border-top: 1px solid $deepblue
+		border-left: 1px solid $deepblue
+		color: $gull-gray
+		margin: 0 (-$side-menu_padding-horizontal+px)
+		padding: 10px 40px
+		a
+			width: 100%
+		&:hover a
+			color: $orange
+		&:last-of-type
+			border-bottom: 1px solid $deepblue
+		&__icon
+			font-size: 18px

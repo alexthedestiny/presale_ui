@@ -1,0 +1,50 @@
+@import '~src/assets/sass/variables'
+@import '~src/assets/sass/mixins'
+
+p
+	margin: 0
+.no-image
+	+display_jc_ai(center, center)
+	border: 2px solid $gray
+	color: $gray
+	font-size: 30px
+	height: 150px
+	width: 100%
+.common-card
+	+display_flex-direction(column)
+	flex-shrink: 0
+	margin-top: 25px
+	width: 270px
+	&__title
+		&-name
+			color: white
+		&-subtitle
+			color: $gull-gray
+			font-size: 0.8em
+			margin-top: 5px
+		&-row
+			background-color: $cornflower-blue
+			text-align: center
+			text-transform: uppercase
+			padding: 10px
+	&__details
+		+display_flex-direction(column)
+		&-row
+			+display_jc_ai(space-between, null)
+			color: $cornflower-blue	
+			padding: 10px 5px
+		&-border
+			border-top: 1px solid grey
+			&_last
+				border-top: 1px solid grey
+				border-bottom: 1px solid grey
+	&__button
+		align-self: center
+		background-color: $orange
+		border-radius: 3px
+		color: #FFF
+		cursor: pointer
+		margin-top: 20px
+		padding: 5px
+		text-align: center
+		width: 200px

@@ -1,0 +1,48 @@
+<div class="common-card">
+	<div class="common-card__title-row">
+		<p class="common-card__title-name">{{cardObject.title}}</p>
+		<p class="common-card__title-subtitle">{{cardObject.address_object.city}}, {{cardObject.address_object.canton}}</p>
+	</div>
+	<div class="common-card__image">
+		<!-- <img src="" alt="image"> -->
+		<div class="no-image">
+			Placeholder
+		</div>
+	</div>
+	<div class="common-card__invest-row">
+		<div class="common-card__details-row">
+			<p>Available to invest</p>
+			<p>{{cardObject.financial.available_to_invest}}</p>
+		</div>
+		<div [ngStyle]="{'width': cardObject.financial.funded / cardObject.financial.investment_goal  * 1000 + '%'}"></div>
+	</div>
+	<div class="common-card__details">
+		<div class="common-card__details-row common-card__details-border">
+			<p>Purchase cost</p>
+			<p>{{cardObject.financial.market_value}}</p>
+		</div>
+		<div class="common-card__details-row common-card__details-border">
+			<p>Min. Investment</p>
+			<p>{{cardObject.financial.minimum_investment}}</p>
+		</div>
+		<div class="common-card__details-row common-card__details-border">
+			<p>Investment Type</p>
+			<p>{{cardObject.type == 'co_ownership' ? 'Co-Ownership' : cardObject.type}}</p>
+		</div>
+		<div class="common-card__details-row common-card__details-border">
+			<p>Mortage (LTV)</p>
+			<p>{{cardObject.financial.loan_to_value}}%</p>
+		</div>
+		<div class="common-card__details-row common-card__details-border">
+			<p>Holding Period</p>
+			<p>{{cardObject.financial.holding_period}}</p>
+		</div>
+		<div class="common-card__details-row common-card__details-border_last">
+			<p>Expected Return on Equity</p>
+			<p>{{cardObject.financial.annual_yield_or_roi}}%</p>
+		</div>
+		<div class="common-card__button">
+			<span>More details</span>
+		</div>
+	</div>
+</div>

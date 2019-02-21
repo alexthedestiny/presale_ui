@@ -1,0 +1,1 @@
+export const API_URL = 'http://private-1b3550-phpbackend.apiary-mock.com/';

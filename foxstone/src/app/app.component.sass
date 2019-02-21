@@ -1,0 +1,19 @@
+@import '~src/assets/sass/variables'
+@import '~src/assets/sass/mixins'
+
+body
+	font-family: Lato, sans-serif
+
+.container
+	display: flex
+	width: 100%
+.side-menu
+	background-color: $cornflower-blue
+	flex-shrink: 0
+	min-height: 100vh
+	padding: 0 20px
+	width: $side-menu_width +px
+.content
+	margin-top: #{$header-row_height + $header-row_padding-vertical * 2}px
+	padding: 0 $content_padding-horizontal+px
+	width: 100%

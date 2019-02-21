@@ -1,0 +1,31 @@
+@import '~src/assets/sass/variables'
+@import '~src/assets/sass/mixins'
+
+.header
+	left: #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px
+	position: fixed
+	width: calc(100% - #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px)
+	&__row
+		background-color: white
+		+display_jc_ai(space-between, center)
+		height: $header-row_height +px
+		padding: 10px $content_padding-horizontal + px
+	&__title
+		color: $gray
+	&__user
+		&-controls, &-options
+			display: flex
+		&-icon, &-options
+			margin: 0 8px
+		&-icon
+			color: $cornflower-blue
+			cursor: pointer
+			&_circle
+				background-color: $cornflower-blue
+				border-radius: 50%
+				color: $mischka
+				height: 26px
+				width: 26px
+				+display_jc_ai(center, null)
+		&-options
+			align-items: center

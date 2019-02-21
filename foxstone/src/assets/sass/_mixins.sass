@@ -1,0 +1,25 @@
+// flex
+
+@mixin display_flex-direction($value)
+	display: flex
+	flex-direction: $value
+
+@mixin jc_ai($justify-content, $align-items)
+	justify-content: $justify-content
+	align-items: $align-items
+
+@mixin display_jc_ai($justify-content, $align-items)
+	display: flex
+	justify-content: $justify-content
+	align-items: $align-items
+
+// inline-flex
+
+@mixin display-inline-f_flex-direction($value)
+	display: inline-flex
+	flex-direction: $value
+
+@mixin display-inline-f_jc_ai($justify-content, $align-items)
+	display: inline-flex
+	justify-content: $justify-content
+	align-items: $align-items
