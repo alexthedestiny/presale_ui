@@ -13,11 +13,11 @@ export class OfferingsPageComponent implements OnInit {
 
   ngOnInit() {
   	this.offeringsService.getOfferings().subscribe( data => {
-  		data.forEach(value => {
-  			value.mainPhoto.url = value.mainPhoto.url.replace(/\\/g, '');
+  		data.forEach((value, index) => {
+        value.imgName = `pic-${index+1}`;
+        index == 0 ? value.cardType = "featured" : value.cardType = "common";
   		});
   		this.offeringsData = data;
-  		console.log(this.offeringsData)
   	})
   }
 

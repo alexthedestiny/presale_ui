@@ -1,5 +1,6 @@
 <div class="offerings-list">
-	<div *ngFor="let offeringData of offeringsData;">
-		<app-common-card [cardObject]="offeringData"></app-common-card>
+	<div *ngFor="let offeringData of offeringsData;" [class.offerings-item]="offeringData.cardType == 'common'" [class.offerings-featured]="offeringData.cardType == 'featured'">
+		<app-common-card *ngIf="offeringData.cardType == 'common'" [cardObject]="offeringData"></app-common-card>
+		<app-featured-card *ngIf="offeringData.cardType == 'featured'" [cardObject]="offeringData"></app-featured-card>
 	</div>
 </div>	
