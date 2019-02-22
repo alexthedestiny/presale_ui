@@ -2,9 +2,10 @@
 @import '~src/assets/sass/mixins'
 
 .header
-	left: #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px
+	// left: #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px
 	position: fixed
 	width: calc(100% - #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px)
+	z-index: 1
 	&__row
 		background-color: white
 		+display_jc_ai(space-between, center)

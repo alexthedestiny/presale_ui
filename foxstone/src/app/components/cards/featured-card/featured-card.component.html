@@ -9,17 +9,19 @@
 		</div>
 		<div class="featured-card__invest-row">
 			<p>Available to invest</p>
-			<p>{{cardObject.financial.available_to_invest}}</p>
-			<!-- <div [ngStyle]="{'width': cardObject.financial.funded / cardObject.financial.investment_goal  * 1000 + '%'}"></div> -->
+			<p>CHF {{cardObject.financial.available_to_invest}}</p>
+			<div class="featured-card__progress">
+				<div [ngStyle]="{'width': cardObject.financial.available_to_invest / cardObject.financial.market_value  * 100 + '%'}" ></div>
+			</div>
 		</div>
 		<div class="featured-card__details">
 			<div class="featured-card__details-row featured-card__details-border">
 				<p>Purchase cost</p>
-				<p>{{cardObject.financial.market_value}}</p>
+				<p>CHF {{cardObject.financial.market_value}}</p>
 			</div>
 			<div class="featured-card__details-row featured-card__details-border">
 				<p>Min. Investment</p>
-				<p>{{cardObject.financial.minimum_investment}}</p>
+				<p>CHF {{cardObject.financial.minimum_investment}}</p>
 			</div>
 			<div class="featured-card__details-row featured-card__details-border">
 				<p>Investment Type</p>
@@ -31,7 +33,7 @@
 			</div>
 			<div class="featured-card__details-row featured-card__details-border">
 				<p>Holding Period</p>
-				<p>{{cardObject.financial.holding_period}}</p>
+				<p>{{cardObject.financial.holding_period}} years</p>
 			</div>
 			<div class="featured-card__details-row featured-card__details-border">
 				<p>Expected Return on Equity</p>
