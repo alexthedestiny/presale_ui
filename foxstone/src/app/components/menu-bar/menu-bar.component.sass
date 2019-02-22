@@ -2,19 +2,27 @@
 @import '~src/assets/sass/mixins'
 
 .menu
-	width: $side-menu_width +px
+	+display_flex-direction(column)
+	height: 100vh
+	max-height: 100vh
 	position: fixed
+	overflow-y: auto
+	overflow-x: hidden
+	top: 0
+	left: 0
+	width: $side-menu_width +px
 	&-logo
-		width: 80%
+		width: 75%
+		margin-left: 30px
 		&__container
-			margin: 20px 0 50px
+			margin: 10px 0 50px
 	&-item
-		display: flex
 		border-top: 1px solid $deepblue
 		border-left: 1px solid $deepblue
 		color: $gull-gray
-		margin: 0 (-$side-menu_padding-horizontal+px)
-		padding: 10px 40px
+		display: flex
+		flex-shrink: 0
+		padding: 25px 15px
 		a
 			width: 100%
 		&:hover a
@@ -23,3 +31,16 @@
 			border-bottom: 1px solid $deepblue
 		&__icon
 			font-size: 18px
+			margin-right: 10px
+@media (max-width: 768px)
+	.menu
+		width: $side-menu_width-responsive +px
+@media (max-width: 576px)
+	.menu
+		width: $side-menu_width-mobile +px
+		&-item
+			&__name
+				display: none
+		&-logo
+			&__container
+				display: none

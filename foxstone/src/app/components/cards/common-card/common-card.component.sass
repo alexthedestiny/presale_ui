@@ -6,7 +6,7 @@ p
 	
 .common-card
 	background-color: #ffffff
-	box-shadow: 0 0 10px 2px rgba(0,0,0,0.5)
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.2)
 	+display_flex-direction(column)
 	flex-shrink: 0
 	margin: 50px 0 0
@@ -14,18 +14,20 @@ p
 	width: 100%
 	&__button
 		align-self: center
-		background-color: $orange
+		background-color: $darkorange
 		border-radius: 3px
 		color: #FFF
 		cursor: pointer
+		font-size: 10px
 		margin-top: 20px
 		padding: 10px
 		text-align: center
-		width: 200px
+		text-transform: uppercase
+		width: 175px
 	&__image
-		height: 150px
-		width: 100%
+		height: 145px
 		object-fit: cover
+		width: 100%
 	&__title
 		&-name
 			color: white
@@ -35,17 +37,38 @@ p
 			margin-top: 5px
 		&-row
 			background-color: $cornflower-blue
+			padding: 15px
 			text-align: center
 			text-transform: uppercase
-			padding: 10px
 	&__details
 		+display_flex-direction(column)
 		&-row
 			+display_jc_ai(space-between, null)
 			color: $cornflower-blue	
-			padding: 10px 5px
+			padding: 10px 20px
+			p
+				font-size: 10px
+				font-weight: 700
 		&-border
 			border-top: 1px solid $gray
 			&_last
 				border-top: 1px solid $gray
 				border-bottom: 1px solid $gray
+	&__invest
+		&-row
+			padding: 10px
+			>div
+				&:first-child
+					padding: 0px
+	&__progress
+		background: $lightorange
+		border-radius: 5px
+		height: 5px
+		margin: 10px 0
+		padding: 0
+		position: relative
+		overflow: hidden
+		width: 100%
+		>div
+			background: linear-gradient(to right, $darkorange, $tangerine)
+			height: 100%

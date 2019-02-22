@@ -2,9 +2,10 @@
 @import '~src/assets/sass/mixins'
 
 .header
-	left: #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px
+	// left: #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px
 	position: fixed
-	width: calc(100% - #{$side-menu_width + ($side-menu_padding-horizontal * 2)}px)
+	width: calc(100% - #{$side-menu_width }px)
+	z-index: 1
 	&__row
 		background-color: white
 		+display_jc_ai(space-between, center)
@@ -29,3 +30,14 @@
 				+display_jc_ai(center, null)
 		&-options
 			align-items: center
+@media (max-width: 768px)
+	.header
+		width: calc(100% - #{$side-menu_width-responsive}px)
+@media (max-width: 576px)
+	.header
+		width: calc(100% - #{$side-menu_width-mobile}px)
+		&__title
+			display: none
+		&__user
+			&-controls
+				align-items: center

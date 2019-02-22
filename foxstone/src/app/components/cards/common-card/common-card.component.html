@@ -9,18 +9,20 @@
 	<div class="common-card__invest-row">
 		<div class="common-card__details-row">
 			<p>Available to invest</p>
-			<p>{{cardObject.financial.available_to_invest}}</p>
+			<p>CHF {{cardObject.financial.available_to_invest}}</p>
 		</div>
-		<div [ngStyle]="{'width': cardObject.financial.funded / cardObject.financial.investment_goal  * 1000 + '%'}"></div>
+		<div class="common-card__progress">
+			<div [ngStyle]="{'width': cardObject.financial.available_to_invest / cardObject.financial.market_value  * 100 + '%'}" ></div>
+		</div>
 	</div>
 	<div class="common-card__details">
 		<div class="common-card__details-row common-card__details-border">
 			<p>Purchase cost</p>
-			<p>{{cardObject.financial.market_value}}</p>
+			<p>CHF {{cardObject.financial.market_value}}</p>
 		</div>
 		<div class="common-card__details-row common-card__details-border">
 			<p>Min. Investment</p>
-			<p>{{cardObject.financial.minimum_investment}}</p>
+			<p>CHF {{cardObject.financial.minimum_investment}}</p>
 		</div>
 		<div class="common-card__details-row common-card__details-border">
 			<p>Investment Type</p>

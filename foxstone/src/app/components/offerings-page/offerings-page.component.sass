@@ -2,12 +2,19 @@
 @import '~src/assets/sass/mixins'
 
 .offerings
+	&-item
+		min-width: 270px
+		width: 30%
 	&-list
 		+display_jc_ai(space-between, null)
 		flex-wrap: wrap
 		padding-bottom: 50px
-	&-item
-		min-width: 270px
-		width: 30%
 	&-featured
 		width: 100%
+@media (max-width: 1170px)
+	.offerings
+		&-item
+			margin: 0 15px
+			width: 40%
+		&-list
+			justify-content: space-around
