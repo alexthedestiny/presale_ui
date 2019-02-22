@@ -1,20 +1,29 @@
 @import '~src/assets/sass/variables'
 @import '~src/assets/sass/mixins'
 
-body
-	font-family: Lato, sans-serif
-
 .container
 	display: flex
+	font-family: Lato, sans-serif
+	width: 100%
+.content
+	margin-top: #{$header-row_height + $header-row_padding-vertical * 2}px
+	max-width: 1200px
+	padding: 0 $content_padding-horizontal+px
 	width: 100%
 .side-menu
 	background-color: $cornflower-blue
 	flex-shrink: 0
 	min-height: 100vh
-	padding: 0 30px
 	width: $side-menu_width +px
-.content
+.wrapper
 	background-color: rgb(240,240,245)
-	margin-top: #{$header-row_height + $header-row_padding-vertical * 2}px
-	padding: 0 $content_padding-horizontal+px
+	+display_jc_ai(center, null)
 	width: 100%
+@media (max-width: 768px)
+	.side-menu
+		width: $side-menu_width-responsive +px
+@media (max-width: 576px)
+	.content
+		padding: 0
+	.side-menu
+		width: $side-menu_width-mobile +px
